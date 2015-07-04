@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="pt-BR">
+    <meta charset="UTF-8">
+    <title>FM TECH</title>
+    <link href="css/Style.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+    <body>
+        <header>
+            <div id="header">
+
+            </div>
+            <div id="navbar">
+
+            </div>
+            <div class="content">
+                A unidade de medida expressa em porcentagem é uma grandeza relativa. Relativa à uma referência. Assim, quando dizemos que a largura de um box é igual a 50% precisamos de um valor que sirva de referência para o cálculo daquela porcentagem. Podemos afirmar que o box terá a metade da largura da referência, mas se a largura da referência for indeterminada não teremos um valor determinado.
+
+                A Especificação para as CSS prevê que o valor de referência para cálculo da largura de um box, expressa em porcentagem, é igual à largura da área de conteúdo do box no qual ele está contido.
+
+                Em CSS o valor inicial da propriedade width de um box é sempre definido, e igual a auto. Assim, podemos concluir que o valor de referência sempre existirá, seja definido explicitamente seja o valor inicial.
+
+                Mas, qual o significado de auto? A Especificação diz que auto depende do valor de outras propriedades e explica como chegar a esse valor considerando inúmeras situações. Essas outras propriedades são: margin, border, padding e width do box e as situações dizem respeito ao tipo de box, se inline "replaced", inline "non-replaced", ou nível de bloco.
+
+                Para resumir todas as situações podemos simplificar dizendo que width: auto; refere-se à largura total do box.
+
+                Criei, conforme relacionadas a seguir, três páginas exemplo mostrando a definição desses valores de largura (100% e auto) para esclarecer na prática o que prevê a Especificação.
+
+                Esse exemplo (abre em outra janela) mostra um box container com largura de 600px e dentro dele foram criados dois boxes com largura igual a 100%. O primeiro possui borda e padding (a margem vertical não influi na largura e foi colocada somente para efeito de legibilidade) e o segundo não. Notar que o primeiro box apesar de ter sua largura declarada igual a 100% ultrapassou a borda direita do box container.
+
+                A Especificação diz que o valor porcentagem para a propriedade width de um box é calculado em relação a largura da área de conteúdo do box no qual ele está contido. Então o primeiro box-filho terá largura total igual a 100% de 600px + paddings + borders e o segundo 100% de 600px + 0paddings + 0borders.
+
+                Esse exemplo (abre em outra janela), idêntico ao anterior mostra os dois boxes com largura igual a auto. Notar que os boxes não ultrapassaram a borda direita do box container.
+
+                A Especificação diz que o valor auto para a propriedade width de um box é calculado levando em consideração margin, border, padding e width o que faz com que ambos os boxes-filho se ajustem dentro do box container.
+
+                Esse exemplo (abre em outra janela), idêntico ao anterior mostra dois boxes, um com largura igual a 100% e outro com largura igual a auto. Ambos possuem borda e padding (a margem vertical não influi na largura e foi colocada somente para efeito de legibilidade) e o segundo não. Notar que o primeiro box apesar de ter sua largura declarada igual a 100% ultrapassou a borda direita do box container e o segundo com largura declarada igual a auto não ultrapassou.
+
+                Esse exemplo combina os dois anteriores e fornece a explicação para a questão proposta no início da matéria.
+
+                E agora eu pergunto:
+                Você tem mesmo certeza que no seu projeto de design responsivo deve declarar width: 100%; para pequenas larguras de viewport?
+
+                Mas, isso não é tudo!
+
+                A Especificação prevê que para boxes posicionados de forma absoluta o valor de referência para cálculo da porcentagem e igual à largura da área de conteúdo mais a área de padding do box container.
+
+                Esse exemplo (abre em outra janela) mostra um box container com width: 560px; e mais 20px de paddings laterais no qual foram inseridos dois boxes, o primeiro posicionado absolutamente e o segundo no fluxo normal, sem posicionamento. A ambos foi declarado width: 100%. Abra o exemplo, examine e analise o resultado. Experimente fazer uma cópia do arquivo e alterar para width: auto;
+
+                Convém lembrar que o Rascunho de Trabalho do W3C para o Módulo CSS3 UI prevê na seção 6 item 6.1 a propriedade box-sizing, que vem sendo largamente usada nos dias atuais. Essa propriedade altera o Box Model tradicional das CSS e elimina os efeitos indesejáveis da declaração width:
+                A unidade de medida expressa em porcentagem é uma grandeza relativa. Relativa à uma referência. Assim, quando dizemos que a largura de um box é igual a 50% precisamos de um valor que sirva de referência para o cálculo daquela porcentagem. Podemos afirmar que o box terá a metade da largura da referência, mas se a largura da referência for indeterminada não teremos um valor determinado.
+
+                A Especificação para as CSS prevê que o valor de referência para cálculo da largura de um box, expressa em porcentagem, é igual à largura da área de conteúdo do box no qual ele está contido.
+
+                Em CSS o valor inicial da propriedade width de um box é sempre definido, e igual a auto. Assim, podemos concluir que o valor de referência sempre existirá, seja definido explicitamente seja o valor inicial.
+
+                Mas, qual o significado de auto? A Especificação diz que auto depende do valor de outras propriedades e explica como chegar a esse valor considerando inúmeras situações. Essas outras propriedades são: margin, border, padding e width do box e as situações dizem respeito ao tipo de box, se inline "replaced", inline "non-replaced", ou nível de bloco.
+
+                Para resumir todas as situações podemos simplificar dizendo que width: auto; refere-se à largura total do box.
+
+                Criei, conforme relacionadas a seguir, três páginas exemplo mostrando a definição desses valores de largura (100% e auto) para esclarecer na prática o que prevê a Especificação.
+
+                Esse exemplo (abre em outra janela) mostra um box container com largura de 600px e dentro dele foram criados dois boxes com largura igual a 100%. O primeiro possui borda e padding (a margem vertical não influi na largura e foi colocada somente para efeito de legibilidade) e o segundo não. Notar que o primeiro box apesar de ter sua largura declarada igual a 100% ultrapassou a borda direita do box container.
+
+                A Especificação diz que o valor porcentagem para a propriedade width de um box é calculado em relação a largura da área de conteúdo do box no qual ele está contido. Então o primeiro box-filho terá largura total igual a 100% de 600px + paddings + borders e o segundo 100% de 600px + 0paddings + 0borders.
+
+                Esse exemplo (abre em outra janela), idêntico ao anterior mostra os dois boxes com largura igual a auto. Notar que os boxes não ultrapassaram a borda direita do box container.
+
+                A Especificação diz que o valor auto para a propriedade width de um box é calculado levando em consideração margin, border, padding e width o que faz com que ambos os boxes-filho se ajustem dentro do box container.
+
+                Esse exemplo (abre em outra janela), idêntico ao anterior mostra dois boxes, um com largura igual a 100% e outro com largura igual a auto. Ambos possuem borda e padding (a margem vertical não influi na largura e foi colocada somente para efeito de legibilidade) e o segundo não. Notar que o primeiro box apesar de ter sua largura declarada igual a 100% ultrapassou a borda direita do box container e o segundo com largura declarada igual a auto não ultrapassou.
+
+                Esse exemplo combina os dois anteriores e fornece a explicação para a questão proposta no início da matéria.
+
+                E agora eu pergunto:
+                Você tem mesmo certeza que no seu projeto de design responsivo deve declarar width: 100%; para pequenas larguras de viewport?
+
+                Mas, isso não é tudo!
+
+                A Especificação prevê que para boxes posicionados de forma absoluta o valor de referência para cálculo da porcentagem e igual à largura da área de conteúdo mais a área de padding do box container.
+
+                Esse exemplo (abre em outra janela) mostra um box container com width: 560px; e mais 20px de paddings laterais no qual foram inseridos dois boxes, o primeiro posicionado absolutamente e o segundo no fluxo normal, sem posicionamento. A ambos foi declarado width: 100%. Abra o exemplo, examine e analise o resultado. Experimente fazer uma cópia do arquivo e alterar para width: auto;
+
+                Convém lembrar que o Rascunho de Trabalho do W3C para o Módulo CSS3 UI prevê na seção 6 item 6.1 a propriedade box-sizing, que vem sendo largamente usada nos dias atuais. Essa propriedade altera o Box Model tradicional das CSS e elimina os efeitos indesejáveis da declaração width:
+                A unidade de medida expressa em porcentagem é uma grandeza relativa. Relativa à uma referência. Assim, quando dizemos que a largura de um box é igual a 50% precisamos de um valor que sirva de referência para o cálculo daquela porcentagem. Podemos afirmar que o box terá a metade da largura da referência, mas se a largura da referência for indeterminada não teremos um valor determinado.
+
+                A Especificação para as CSS prevê que o valor de referência para cálculo da largura de um box, expressa em porcentagem, é igual à largura da área de conteúdo do box no qual ele está contido.
+
+                Em CSS o valor inicial da propriedade width de um box é sempre definido, e igual a auto. Assim, podemos concluir que o valor de referência sempre existirá, seja definido explicitamente seja o valor inicial.
+
+                Mas, qual o significado de auto? A Especificação diz que auto depende do valor de outras propriedades e explica como chegar a esse valor considerando inúmeras situações. Essas outras propriedades são: margin, border, padding e width do box e as situações dizem respeito ao tipo de box, se inline "replaced", inline "non-replaced", ou nível de bloco.
+
+                Para resumir todas as situações podemos simplificar dizendo que width: auto; refere-se à largura total do box.
+
+                Criei, conforme relacionadas a seguir, três páginas exemplo mostrando a definição desses valores de largura (100% e auto) para esclarecer na prática o que prevê a Especificação.
+
+                Esse exemplo (abre em outra janela) mostra um box container com largura de 600px e dentro dele foram criados dois boxes com largura igual a 100%. O primeiro possui borda e padding (a margem vertical não influi na largura e foi colocada somente para efeito de legibilidade) e o segundo não. Notar que o primeiro box apesar de ter sua largura declarada igual a 100% ultrapassou a borda direita do box container.
+
+                A Especificação diz que o valor porcentagem para a propriedade width de um box é calculado em relação a largura da área de conteúdo do box no qual ele está contido. Então o primeiro box-filho terá largura total igual a 100% de 600px + paddings + borders e o segundo 100% de 600px + 0paddings + 0borders.
+
+                Esse exemplo (abre em outra janela), idêntico ao anterior mostra os dois boxes com largura igual a auto. Notar que os boxes não ultrapassaram a borda direita do box container.
+
+                A Especificação diz que o valor auto para a propriedade width de um box é calculado levando em consideração margin, border, padding e width o que faz com que ambos os boxes-filho se ajustem dentro do box container.
+
+                Esse exemplo (abre em outra janela), idêntico ao anterior mostra dois boxes, um com largura igual a 100% e outro com largura igual a auto. Ambos possuem borda e padding (a margem vertical não influi na largura e foi colocada somente para efeito de legibilidade) e o segundo não. Notar que o primeiro box apesar de ter sua largura declarada igual a 100% ultrapassou a borda direita do box container e o segundo com largura declarada igual a auto não ultrapassou.
+
+                Esse exemplo combina os dois anteriores e fornece a explicação para a questão proposta no início da matéria.
+
+                E agora eu pergunto:
+                Você tem mesmo certeza que no seu projeto de design responsivo deve declarar width: 100%; para pequenas larguras de viewport?
+
+                Mas, isso não é tudo!
+
+                A Especificação prevê que para boxes posicionados de forma absoluta o valor de referência para cálculo da porcentagem e igual à largura da área de conteúdo mais a área de padding do box container.
+
+                Esse exemplo (abre em outra janela) mostra um box container com width: 560px; e mais 20px de paddings laterais no qual foram inseridos dois boxes, o primeiro posicionado absolutamente e o segundo no fluxo normal, sem posicionamento. A ambos foi declarado width: 100%. Abra o exemplo, examine e analise o resultado. Experimente fazer uma cópia do arquivo e alterar para width: auto;
+
+                Convém lembrar que o Rascunho de Trabalho do W3C para o Módulo CSS3 UI prevê na seção 6 item 6.1 a propriedade box-sizing, que vem sendo largamente usada nos dias atuais. Essa propriedade altera o Box Model tradicional das CSS e elimina os efeitos indesejáveis da declaração width:
+            </div>
+            <div id="footer">
+                Copyraght FM cormoration
+            </div>
+        </header>
+    </body>
+</html>
